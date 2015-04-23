@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+
+  <script src="lib/traceur-runtime.js"></script>
+  <script src="lib/es6-module-loader-sans-promises.src.js"></script>
+  <script src="lib/extension-register.js"></script>
+  <script>
+    register(System);
+  </script>
+  <script src="lib/zone.js"></script>
+  <script src="lib/long-stack-trace-zone.js"></script>
+  <script src="lib/angular2.js"></script>
+
+</head>
+
+<body>
+  <app>
+    Loading AngularJS 2.0 Evaluation
+  </app>
+</body>
+
+<script>
+  System.import('app').catch(console.log.bind(console));
+</script>
+
+</html>
